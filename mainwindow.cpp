@@ -12,3 +12,11 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_MainWindow_SaveExitButton_clicked()
+{
+    //Call Save Function
+
+    //Exit
+    this->destroy();
+}
