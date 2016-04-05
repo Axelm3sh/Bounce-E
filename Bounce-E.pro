@@ -14,11 +14,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    dialog_optionsform.cpp \
     dialog_options.cpp
 
 HEADERS  += mainwindow.h \
-    dialog_optionsform.h \
     dialog_options.h
 
 FORMS    += mainwindow.ui \

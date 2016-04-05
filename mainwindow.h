@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "dialog_options.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,6 +20,7 @@ private slots:
     void on_MainWindow_SaveExitButton_clicked();
 
     void on_MainWindow_OptionsButton_clicked();
+    void set_MainWindow_OptionsButton_unlock();
 
     void on_MainWindow_StartButton_clicked();
 
