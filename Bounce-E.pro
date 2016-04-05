@@ -14,10 +14,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    dialog_options.cpp
+    dialog_options.cpp \
+    dialog_guestlist.cpp
 
 HEADERS  += mainwindow.h \
-    dialog_options.h
+    dialog_options.h \
+    dialog_guestlist.h
 
 FORMS    += mainwindow.ui \
-    dialog_options.ui
+    dialog_options.ui \
+    dialog_guestlist.ui
+
+RESOURCES += \
+    stylesresources.qrc \
+    iconimgresources.qrc

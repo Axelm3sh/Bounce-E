@@ -40,4 +40,8 @@ void MainWindow::set_MainWindow_OptionsButton_unlock()
 void MainWindow::on_MainWindow_StartButton_clicked()
 {
     //Goto Login
+    Dialog_GuestList *GuestListWindow = new Dialog_GuestList(this);
+    GuestListWindow->show();
+
+    //Todo Call update from database
 }

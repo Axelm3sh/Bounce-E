@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "dialog_options.h"
+#include "dialog_guestlist.h"
 
 namespace Ui {
 class MainWindow;
