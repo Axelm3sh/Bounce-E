@@ -20,3 +20,13 @@ void MainWindow::on_MainWindow_SaveExitButton_clicked()
     //Exit
     this->destroy();
 }
+
+void MainWindow::on_MainWindow_OptionsButton_clicked()
+{
+    //Call Options Menu
+}
+
+void MainWindow::on_MainWindow_StartButton_clicked()
+{
+    //Goto Login
+}

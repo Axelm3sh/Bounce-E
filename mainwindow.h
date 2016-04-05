@@ -18,6 +18,10 @@ public:
 private slots:
     void on_MainWindow_SaveExitButton_clicked();
 
+    void on_MainWindow_OptionsButton_clicked();
+
+    void on_MainWindow_StartButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
