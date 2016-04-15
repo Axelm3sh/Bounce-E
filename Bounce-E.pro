@@ -15,11 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     dialog_options.cpp \
-    dialog_guestlist.cpp
+    dialog_guestlist.cpp \
+    guestobject.cpp
 
 HEADERS  += mainwindow.h \
     dialog_options.h \
-    dialog_guestlist.h
+    dialog_guestlist.h \
+    guestobject.h
 
 FORMS    += mainwindow.ui \
     dialog_options.ui \
