@@ -30,45 +30,82 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QTableWidget" name="GuestList_tableWidget">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <column>
-       <property name="text">
-        <string>Guest(s) Name</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Contact Info</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Additional Notes</string>
-       </property>
-      </column>
-     </widget>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QTableWidget" name="GuestList_tableWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <column>
+         <property name="text">
+          <string>Guest(s) Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Contact Info</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Additional Notes</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Search Guests:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="GuestList_SearchBar">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
     </item>
     <item>
-     <spacer name="horizontalSpacer">
+     <widget class="Line" name="line">
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
       <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+       <enum>Qt::Vertical</enum>
       </property>
-      <property name="sizeType">
-       <enum>QSizePolicy::Fixed</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
+     </widget>
     </item>
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -130,15 +167,17 @@
                 <pointsize>14</pointsize>
                </font>
               </property>
+              <property name="toolTip">
+               <string>Guests in a group should be separated by a comma.</string>
+              </property>
               <property name="text">
                <string/>
               </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="hasChaperonsLabel">
-              <property name="text">
-               <string>Has Chaperons?</string>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+               <string>Guest Name</string>
               </property>
              </widget>
             </item>
@@ -150,27 +189,29 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Has Chaperons?</string>
+              </property>
              </widget>
             </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="glutenFreeLabel">
+            <item row="2" column="1">
+             <widget class="QCheckBox" name="glutenFreeCheckBox">
               <property name="text">
                <string>Gluten Free?</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="1">
-             <widget class="QCheckBox" name="glutenFreeCheckBox"/>
-            </item>
-            <item row="3" column="0">
-             <widget class="QLabel" name="allergiesLabel">
+            <item row="3" column="1">
+             <widget class="QCheckBox" name="allergiesCheckBox">
               <property name="text">
                <string>Allergies?</string>
               </property>
              </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QCheckBox" name="allergiesCheckBox"/>
             </item>
             <item row="4" column="0">
              <widget class="QLabel" name="prePaidLabel">
@@ -218,6 +259,12 @@
                 <pointsize>14</pointsize>
                </font>
               </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="placeholderText">
+               <string>123-456-7890</string>
+              </property>
              </widget>
             </item>
             <item row="7" column="0">
@@ -228,7 +275,16 @@
              </widget>
             </item>
             <item row="7" column="1">
-             <widget class="QPlainTextEdit" name="additionalNotesplainTextEdit"/>
+             <widget class="QPlainTextEdit" name="additionalNotesplainTextEdit">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="placeholderText">
+               <string>Type Additional Notes Here</string>
+              </property>
+             </widget>
             </item>
             <item row="5" column="0">
              <widget class="QLabel" name="emailAddressOptLabel">
@@ -243,6 +299,9 @@
                <font>
                 <pointsize>12</pointsize>
                </font>
+              </property>
+              <property name="placeholderText">
+               <string>username@email.com</string>
               </property>
              </widget>
             </item>
@@ -287,7 +346,7 @@
            <enum>Qt::LeftToRight</enum>
           </property>
           <property name="text">
-           <string>Check In</string>
+           <string>Check In RSVP</string>
           </property>
          </widget>
         </item>
@@ -308,7 +367,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="GuestList_pushButton_checkOut">
+         <widget class="QPushButton" name="GuestList_pushButton_NewGuest">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
@@ -324,25 +383,9 @@
            <enum>Qt::LeftToRight</enum>
           </property>
           <property name="text">
-           <string>Check Out</string>
+           <string>New Guest</string>
           </property>
          </widget>
-        </item>
-        <item>
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
         </item>
        </layout>
       </item>
